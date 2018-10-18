@@ -5,18 +5,15 @@
 // Useful linkf for us Alex:
 // http://fsharp.github.io/FSharp.Data/library/JsonProvider.html
 // https://msdn.microsoft.com/visualfsharpdocs/conceptual/visual-fsharp
-
+module Program
 
 open FSharp.Data;
 open FSharp.Linq;
 
+open JsonManager;
 
-
-// just an examples
-type Simple = JsonProvider<""" { "name":"John", "age":94 } """>
-let simple = Simple.Parse(""" { "name":"Tomas", "age":4 } """)
-
-
+let jsonManager = new JsonManager("../../../Data/Dossier1.json")
+jsonManager.PrintDoc()
 
 [<EntryPoint>]
 let main argv = 
