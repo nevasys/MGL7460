@@ -54,14 +54,22 @@ let leTraitement () =
             for itemsRecu in listeDesSoinsRecu do
                 if(itemsAssure.Soin = itemsRecu.NumSoin) then 
                     let montantRemboursement : decimal = Decimal.Parse(itemsRecu.Montant.ToString()) * itemsAssure.Pourcentage
+                    
+                    if((itemsAssure.HasLimiteMensuelle=true) And montantRemboursement > Decimal.Parse(itemsAssure.LimiteMensuelle.ToString())) then
+                        let montantRemboursement = Decimal.Parse(itemsAssure.LimiteMensuelle.ToString())
+                          
+
                     if(montantRemboursement < Decimal.Parse(itemsAssure.Limite.ToString()) && itemsAssure.Limite <> 0) then 
                         lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, montantRemboursement) :: lesSoinRembourse
+                        let itemsAssure.LimiteMensuelle =  itemsAssure.LimiteMensuelle - montantRemboursement
+                        itemsAssure.LimiteMensuelle
                     else
                         lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, Decimal.Parse(itemsAssure.Limite.ToString())) :: lesSoinRembourse
+                        let itemsAssure.LimiteMensuelle =  itemsAssure.LimiteMensuelle - Decimal.Parse(itemsAssure.Limite.ToString())
+                        itemsAssure.LimiteMensuelle
 
- 
+
     let listeDesRemboursement  = lesSoinRembourse |> List.toArray
-
 
 
     //****Affichage à la console****

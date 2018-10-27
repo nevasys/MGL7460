@@ -28,11 +28,12 @@ let ValiderMontantRecu(montant) : bool =
 
 
 
-type SoinAssure(numSoin, pourcentage : decimal, limite : int, limiteMensuelle : int) =
+type SoinAssure(numSoin, pourcentage : decimal, limite : decimal, limiteMensuelle : decimal) =
     member this.Soin = numSoin
     member this.Pourcentage = pourcentage
     member this.Limite = limite
     member this.LimiteMensuelle = limiteMensuelle
+    member this.HasLimiteMensuelle = this.LimiteMensuelle <> Decimal.Parse("0")
 
 let SoinAssureExpr : Regex = new Regex(@"^\d{3}$") 
 let PourAssurecExpr : Regex = new Regex(@"^*(\%)$")
