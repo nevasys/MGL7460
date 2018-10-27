@@ -64,7 +64,7 @@ let leTraitement () =
 
 
 
-
+    //****Affichage à la console****
     let LettreTypeDeContratTemp = PoliceContratRecu.Dossier.ToString()
     let LettreTypeDeContrat = LettreTypeDeContratTemp.[0]
 
