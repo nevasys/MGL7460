@@ -4,6 +4,8 @@ open System.IO
 open FSharp.Data
 open Soin
 open Police
+open Remboursement
+open System
 
 
 type PoliceSoinsAssures = JsonProvider<"./ressources/polices.json">
@@ -15,23 +17,24 @@ let leTraitement () =
     let itemsPolice = PoliceSoinsAssures.Parse(File.ReadAllText("./ressources/polices.json"))
     let itemsReclamation = ReclamationSoinsAssures.Parse(File.ReadAllText("./ressources/input1.json"))
 
-    let mutable lesDeSoinAssure : SoinAssure list = []
-    let mutable leseDeSoinRecu : SoinRecu list = []
+    let mutable lesSoinAssure : SoinAssure list = []
+    let mutable lesSoinRecu : SoinRecu list = []
+    let mutable lesSoinRembourse : Remboursement list = []
 
     let PoliceContratRecu = new Police(itemsReclamation.Dossier, itemsReclamation.Mois)
 
     for demandeReclamation in itemsReclamation.Reclamations do
-        leseDeSoinRecu <- new SoinRecu(demandeReclamation.Soin, demandeReclamation.Date, demandeReclamation.Montant) :: leseDeSoinRecu
+        lesSoinRecu <- new SoinRecu(demandeReclamation.Soin, demandeReclamation.Date, demandeReclamation.Montant) :: lesSoinRecu
 
-    let listeDesSoinsRecu  = leseDeSoinRecu |> List.toArray
+    let listeDesSoinsRecu  = lesSoinRecu |> List.toArray
 
 
     for contract in itemsPolice.Police do
         if(contract.Contrat = PoliceContratRecu.Dossier.ToString().[0].ToString()) then
             for care in contract.Soins do
-                lesDeSoinAssure <- new SoinAssure(care.Soin, care.Pourcentage, care.Limite, care.LimiteMensuelle) :: lesDeSoinAssure
+                lesSoinAssure <- new SoinAssure(care.Soin, care.Pourcentage, care.Limite, care.LimiteMensuelle) :: lesSoinAssure
 
-    let listeDesSoinsAssurer  = lesDeSoinAssure |> List.toArray
+    let listeDesSoinsAssurer  = lesSoinAssure |> List.toArray
 
 
     //*****Validation*****
@@ -42,28 +45,37 @@ let leTraitement () =
         for y in listeDesSoinsRecu do
             if not (ValiderSoinRecu(y.NumSoin.ToString())) then printfn "Soin %A est non valide" y.NumSoin
             if not (ValiderDateRecu(y.DateSoin.ToString())) then printfn "Date %A du soin %A est non valide" y.DateSoin y.NumSoin
-            if not (ValiderMoisReclamation(PoliceContratRecu.Mois, y.DateSoin)) then printfn "Reclamation d'un autre mois pour le soin : %A" y.NumSoin
-            if not (ValiderMontantRecu(y.Montant.ToString())) then printfn "Montant du soin %A est non valide" y.NumSoin
+            if (ValiderMoisReclamation(PoliceContratRecu.Mois, y.DateSoin)) then printfn "Reclamation d'un autre mois pour le soin : %A" y.NumSoin
+            //if not (ValiderMontantRecu(y.Montant.ToString())) then printfn "Montant '%A' du soin %A est non valide" y.Montant y.NumSoin
 
     //*****Taitement des données*****
+    let calculerRemboursement = 
+        for itemsAssure in listeDesSoinsAssurer do
+            for itemsRecu in listeDesSoinsRecu do
+                if(itemsAssure.Soin = itemsRecu.NumSoin) then 
+                    let montantRemboursement : decimal = Decimal.Parse(itemsRecu.Montant.ToString()) * itemsAssure.Pourcentage
+                    if(montantRemboursement < Decimal.Parse(itemsAssure.Limite.ToString()) && itemsAssure.Limite <> 0) then 
+                        lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, montantRemboursement) :: lesSoinRembourse
+                    else
+                        lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, Decimal.Parse(itemsAssure.Limite.ToString())) :: lesSoinRembourse
+
+ 
+    let listeDesRemboursement  = lesSoinRembourse |> List.toArray
+
+
+
+
     let LettreTypeDeContratTemp = PoliceContratRecu.Dossier.ToString()
     let LettreTypeDeContrat = LettreTypeDeContratTemp.[0]
 
+    printfn "Dossier : %A" PoliceContratRecu.Dossier
 
+    printfn "Mois : %A"  PoliceContratRecu.Mois
 
-
-
-    printfn "Liste des soins reclamé pour le contrat : %A" PoliceContratRecu.Dossier
-    //for y in listeDesSoinsRecu do
-        //printfn "Soin reclamé: %A" y.NumSoin
-        //printfn "Montant reclamé: %A" y.Montant
-
-    printfn "Liste des soins assuré pour le contrat : %c"  LettreTypeDeContrat
-    //for x in listeDesSoinsAssurer do
-        //printfn "Soin assuré : %A" x.Soin
-        //printfn "Pourcentage assuré : %A" x.Pourcentage
-        //printfn "Limite assuré : %A" x.Limite
-        //printfn "LimiteMensuelle assuré : %A" x.LimiteMensuelle
-
-   
-
+    printfn "\n"
+    for y in listeDesRemboursement do
+        printfn "soin: %A" y.NumSoin
+        printfn "date: %A" y.DateSoin 
+        printfn "montant %f" y.Montant
+        printfn "\n"
+    

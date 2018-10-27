@@ -13,8 +13,8 @@ type SoinRecu (numSoin, dateSoin : DateTime, montant) =
    //let mutable DateSoin : string = dateSoin
    //let mutable Montant : string = montant
 
-let DateExpr : Regex = new Regex(@"^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$")
-let SoinExpr : Regex = new Regex(@"^\d{3}$") 
+let DateExpr : Regex = new Regex(@"^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01]) (2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$")
+let SoinExpr : Regex = new Regex(@"^\d{1,3}$") 
 let MontExpr : Regex = new Regex(@"^*(\$)$") 
 
 let ValiderSoinRecu(numSoinRecu) : bool = 
@@ -28,7 +28,7 @@ let ValiderMontantRecu(montant) : bool =
 
 
 
-type SoinAssure(numSoin, limite, pourcentage, limiteMensuelle) =
+type SoinAssure(numSoin, pourcentage : decimal, limite : int, limiteMensuelle : int) =
     member this.Soin = numSoin
     member this.Pourcentage = pourcentage
     member this.Limite = limite

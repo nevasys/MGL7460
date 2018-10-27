@@ -11,7 +11,7 @@
         },
         {
           "soin": 100,
-          "pourcentage": 0.35,
+          "pourcentage": 0.25,
           "limite": 0,
           "limiteMensuelle": 250.0
         },
@@ -70,14 +70,14 @@
       "soins": [
         {
           "soin": 0,
-          "pourcentage": 0.25,
-          "limite": 0,
+          "pourcentage": 0.5,
+          "limite": 40.0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 100,
-          "pourcentage": 0.35,
-          "limite": 0,
+          "pourcentage": 0.5,
+          "limite": 50.0,
           "limiteMensuelle": 250.0
         },
         {
@@ -88,19 +88,19 @@
         },
         {
           "soin": 175,
-          "pourcentage": 0.5,
+          "pourcentage": 0.75,
           "limite": 0,
           "limiteMensuelle": 200.0
         },
         {
           "soin": 200,
-          "pourcentage": 0.25,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 70.0,
           "limiteMensuelle": 250.0
         },
         {
           "soin": 300,
-          "pourcentage": 0.0,
+          "pourcentage": 0.5,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
@@ -112,19 +112,19 @@
         },
         {
           "soin": 500,
-          "pourcentage": 0.25,
-          "limite": 0,
+          "pourcentage": 0.5,
+          "limite": 50.0,
           "limiteMensuelle": 150.0
         },
         {
           "soin": 600,
-          "pourcentage": 0.4,
+          "pourcentage": 1.0,
           "limite": 0,
           "limiteMensuelle": 300.0
         },
         {
           "soin": 700,
-          "pourcentage": 0.0,
+          "pourcentage": 0.7,
           "limite": 0,
           "limiteMensuelle": 0.0
         }
@@ -135,61 +135,61 @@
       "soins": [
         {
           "soin": 0,
-          "pourcentage": 0.25,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 100,
-          "pourcentage": 0.35,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 250.0
         },
         {
           "soin": 150,
-          "pourcentage": 0.0,
+          "pourcentage": 0.85,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 175,
-          "pourcentage": 0.5,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 200.0
         },
         {
           "soin": 200,
-          "pourcentage": 0.25,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 250.0
         },
         {
           "soin": 300,
-          "pourcentage": 0.0,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 400,
-          "pourcentage": 0.0,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 500,
-          "pourcentage": 0.25,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 150.0
         },
         {
           "soin": 600,
-          "pourcentage": 0.4,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 300.0
         },
         {
           "soin": 700,
-          "pourcentage": 0.0,
+          "pourcentage": 0.9,
           "limite": 0,
           "limiteMensuelle": 0.0
         }
@@ -200,62 +200,62 @@
       "soins": [
         {
           "soin": 0,
-          "pourcentage": 0.25,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 85.0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 100,
-          "pourcentage": 0.35,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 75.0,
           "limiteMensuelle": 250.0
         },
         {
           "soin": 150,
-          "pourcentage": 0.0,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 150.0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 175,
-          "pourcentage": 0.5,
+          "pourcentage": 0.75,
           "limite": 0,
           "limiteMensuelle": 200.0
         },
         {
           "soin": 200,
-          "pourcentage": 0.25,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 100.0,
           "limiteMensuelle": 250.0
         },
         {
           "soin": 300,
-          "pourcentage": 0.0,
+          "pourcentage": 1.0,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 400,
-          "pourcentage": 0.0,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 65.0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 500,
-          "pourcentage": 0.25,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 75.0,
           "limiteMensuelle": 150.0
         },
         {
           "soin": 600,
-          "pourcentage": 0.4,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 100.0,
           "limiteMensuelle": 300.0
         },
         {
           "soin": 700,
-          "pourcentage": 0.0,
-          "limite": 0,
+          "pourcentage": 1.0,
+          "limite": 90.0,
           "limiteMensuelle": 0.0
         }
       ]
@@ -265,61 +265,61 @@
       "soins": [
         {
           "soin": 0,
-          "pourcentage": 0.25,
+          "pourcentage": 0.15,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 100,
-          "pourcentage": 0.35,
+          "pourcentage": 0.25,
           "limite": 0,
           "limiteMensuelle": 250.0
         },
         {
           "soin": 150,
-          "pourcentage": 0.0,
+          "pourcentage": 0.15,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 175,
-          "pourcentage": 0.5,
-          "limite": 0,
+          "pourcentage": 0.25,
+          "limite": 20.0,
           "limiteMensuelle": 200.0
         },
         {
           "soin": 200,
-          "pourcentage": 0.25,
+          "pourcentage": 0.12,
           "limite": 0,
           "limiteMensuelle": 250.0
         },
         {
           "soin": 300,
-          "pourcentage": 0.0,
+          "pourcentage": 0.6,
           "limite": 0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 400,
-          "pourcentage": 0.0,
-          "limite": 0,
+          "pourcentage": 0.25,
+          "limite": 15.0,
           "limiteMensuelle": 0.0
         },
         {
           "soin": 500,
-          "pourcentage": 0.25,
-          "limite": 0,
+          "pourcentage": 0.30,
+          "limite": 20.0,
           "limiteMensuelle": 150.0
         },
         {
           "soin": 600,
-          "pourcentage": 0.4,
+          "pourcentage": 0.15,
           "limite": 0,
           "limiteMensuelle": 300.0
         },
         {
           "soin": 700,
-          "pourcentage": 0.0,
+          "pourcentage": 0.22,
           "limite": 0,
           "limiteMensuelle": 0.0
         }

@@ -57,6 +57,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <Content Include="packages.config" />
+    <Compile Include="Remboursement.fs" />
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Police.fs" />
     <Compile Include="Soin.fs" />
