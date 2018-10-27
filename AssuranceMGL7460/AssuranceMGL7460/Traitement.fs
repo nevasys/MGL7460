@@ -2,6 +2,7 @@
 
 open System.IO
 open FSharp.Data
+open Soin
 open SoinsAssurer
 open SoinsReclamer
 open Police
@@ -17,34 +18,34 @@ let leTraitement () =
     let itemsPolice = PoliceSoinsAssures.Parse(File.ReadAllText("./ressources/polices.json"))
     let itemsReclamation = ReclamationSoinsAssures.Parse(File.ReadAllText("./ressources/input1.json"))
 
-    let mutable listOfCare : SoinsAssurer list = []
-    let mutable listOfTreatment : SoinsReclamer list = []
+    let mutable listeDeSoinAssure : SoinsAssurer list = []
+    let mutable listeDeSoinRecu : SoinRecu list = []
 
-    let PoliceContratReclamer = new Police(itemsReclamation.Dossier, itemsReclamation.Mois)
+    let PoliceContratRecu = new Police(itemsReclamation.Dossier, itemsReclamation.Mois)
 
     for demandeReclamation in itemsReclamation.Reclamations do
-        listOfTreatment <- new SoinsReclamer(demandeReclamation.Soin, demandeReclamation.Date, demandeReclamation.Montant) :: listOfTreatment
+        listeDeSoinRecu <- new SoinRecu(demandeReclamation.Soin.ToString(), demandeReclamation.Date.ToString(), demandeReclamation.Montant.ToString()) :: listeDeSoinRecu
                 //printfn "Soins : %A" care.Soin
                 //printfn "Pourcentage : %f" care.Pourcentage
 
-    let lesSoinsReclamer  = listOfTreatment |> List.toArray
+    let lesSoinsRecu  = listeDeSoinRecu |> List.toArray
 
 
     for contract in itemsPolice.Police do
-        if(contract.Contrat = PoliceContratReclamer.Dossier.ToString().[0].ToString()) then
+        if(contract.Contrat = PoliceContratRecu.Dossier.ToString().[0].ToString()) then
             for care in contract.Soins do
-                listOfCare <- new SoinsAssurer(care.Soin, care.Pourcentage, care.Limite, care.LimiteMensuelle) :: listOfCare
+                listeDeSoinAssure <- new SoinsAssurer(care.Soin, care.Pourcentage, care.Limite, care.LimiteMensuelle) :: listeDeSoinAssure
                 //printfn "Soins : %A" care.Soin
                 //printfn "Pourcentage : %f" care.Pourcentage
 
-    let lesSoinsAssurer  = listOfCare |> List.toArray
+    let lesSoinsAssurer  = listeDeSoinAssure |> List.toArray
 
-    let temp = PoliceContratReclamer.Dossier.ToString()
+    let temp = PoliceContratRecu.Dossier.ToString()
     let policeContrat = temp.[0]
 
-    printfn "Liste des soins reclamé pour le contrat : %A" PoliceContratReclamer.Dossier
-    for y in lesSoinsReclamer do
-        printfn "Soin reclamé: %A" y.Soin
+    printfn "Liste des soins reclamé pour le contrat : %A" PoliceContratRecu.Dossier
+    for y in lesSoinsRecu do
+        printfn "Soin reclamé: %A" y.NumSoin
         printfn "Montant reclamé: %A" y.Montant
 
     printfn "Liste des soins assuré pour le contrat : %c"  policeContrat

@@ -59,8 +59,6 @@
     <Content Include="packages.config" />
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Police.fs" />
-    <Compile Include="SoinsAssurer.fs" />
-    <Compile Include="SoinsReclamer.fs" />
     <Compile Include="Soin.fs" />
     <Compile Include="Traitement.fs" />
     <Compile Include="JSONHash.fs" />

@@ -55,14 +55,3 @@ let lireFichierReclamation(fichierInput) =
 
 
 
-
-    //printfn "%s - %A" items.Dossier items.Mois
-    
-    //for reclamation in items.Reclamations do
-        //printfn "%i" reclamation.Soin
-
-    //for reclamation in items.Reclamations do
-        //printfn "%A" reclamation.Date
-
-    //for reclamation in items.Reclamations do
-        //printfn "Montant : %f" reclamation.Montant
