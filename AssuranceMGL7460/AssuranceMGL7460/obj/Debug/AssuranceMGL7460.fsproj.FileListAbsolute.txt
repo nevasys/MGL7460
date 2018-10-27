@@ -32,3 +32,7 @@ C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\A
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.fsproj.CopyComplete
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.exe
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.pdb
+C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\AssuranceMGL7460.XML
+C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.fsproj.AssuranceMGL7460.exe.config
+C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.exe
+C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.pdb
