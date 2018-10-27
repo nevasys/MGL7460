@@ -29,6 +29,7 @@ type SoinAssure(numSoin, limit, pourcentage, limitMansuel) = class
    let Pourcentage : string = pourcentage
    let LimitMansuel : string = limitMansuel
 
+
    let SoinExpr : Regex = new Regex(@"^\d{3}$") 
    let PourcExpr : Regex = new Regex(@"^*(\%)$")
    let MontExpr : Regex = new Regex(@"^*(\$)$")     
