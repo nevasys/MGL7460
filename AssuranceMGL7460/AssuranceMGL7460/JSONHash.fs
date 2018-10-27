@@ -47,7 +47,9 @@ let lireFichierReclamation(fichierInput) =
 
     let soinMoisValide =
         for reclamation in items.Reclamations do
-            if(validerMoisSoinRegex.IsMatch(reclamation.Date.ToString())) then printfn "Le mois du soin %i n'est pas valide" reclamation.Soin
+            if(validerMoisSoinRegex.IsMatch(reclamation.Date.ToString())) then 
+                printfn "Le mois du soin %i n'est pas valide" reclamation.Soin
+                printfn "MOIS = %A" reclamation.Date
 
 
     printfn "Validité du dossier : %A" dossierValide

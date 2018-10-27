@@ -1,0 +1,329 @@
+﻿{
+  "police": [
+    {
+      "contrat": "A",
+      "soins": [
+        {
+          "soin": 0,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 100,
+          "pourcentage": 0.35,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 150,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 175,
+          "pourcentage": 0.5,
+          "limite": 0,
+          "limiteMensuelle": 200.0
+        },
+        {
+          "soin": 200,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 300,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 400,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 500,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 150.0
+        },
+        {
+          "soin": 600,
+          "pourcentage": 0.4,
+          "limite": 0,
+          "limiteMensuelle": 300.0
+        },
+        {
+          "soin": 700,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        }
+      ]
+    },
+    {
+      "contrat": "B",
+      "soins": [
+        {
+          "soin": 0,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 100,
+          "pourcentage": 0.35,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 150,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 175,
+          "pourcentage": 0.5,
+          "limite": 0,
+          "limiteMensuelle": 200.0
+        },
+        {
+          "soin": 200,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 300,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 400,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 500,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 150.0
+        },
+        {
+          "soin": 600,
+          "pourcentage": 0.4,
+          "limite": 0,
+          "limiteMensuelle": 300.0
+        },
+        {
+          "soin": 700,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        }
+      ]
+    },
+    {
+      "contrat": "C",
+      "soins": [
+        {
+          "soin": 0,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 100,
+          "pourcentage": 0.35,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 150,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 175,
+          "pourcentage": 0.5,
+          "limite": 0,
+          "limiteMensuelle": 200.0
+        },
+        {
+          "soin": 200,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 300,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 400,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 500,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 150.0
+        },
+        {
+          "soin": 600,
+          "pourcentage": 0.4,
+          "limite": 0,
+          "limiteMensuelle": 300.0
+        },
+        {
+          "soin": 700,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        }
+      ]
+    },
+    {
+      "contrat": "D",
+      "soins": [
+        {
+          "soin": 0,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 100,
+          "pourcentage": 0.35,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 150,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 175,
+          "pourcentage": 0.5,
+          "limite": 0,
+          "limiteMensuelle": 200.0
+        },
+        {
+          "soin": 200,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 300,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 400,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 500,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 150.0
+        },
+        {
+          "soin": 600,
+          "pourcentage": 0.4,
+          "limite": 0,
+          "limiteMensuelle": 300.0
+        },
+        {
+          "soin": 700,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        }
+      ]
+    },
+    {
+      "contrat": "E",
+      "soins": [
+        {
+          "soin": 0,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 100,
+          "pourcentage": 0.35,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 150,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 175,
+          "pourcentage": 0.5,
+          "limite": 0,
+          "limiteMensuelle": 200.0
+        },
+        {
+          "soin": 200,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 250.0
+        },
+        {
+          "soin": 300,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 400,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        },
+        {
+          "soin": 500,
+          "pourcentage": 0.25,
+          "limite": 0,
+          "limiteMensuelle": 150.0
+        },
+        {
+          "soin": 600,
+          "pourcentage": 0.4,
+          "limite": 0,
+          "limiteMensuelle": 300.0
+        },
+        {
+          "soin": 700,
+          "pourcentage": 0.0,
+          "limite": 0,
+          "limiteMensuelle": 0.0
+        }
+      ]
+    }
+  ]
+}

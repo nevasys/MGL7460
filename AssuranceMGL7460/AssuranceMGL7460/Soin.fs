@@ -2,9 +2,10 @@
 
 open FSharp.Data
 open System.Text.RegularExpressions
+open System
 
 //type SoinRecu(numSoin, dateSoin, montant : string) = class
-type SoinRecu (numSoin, dateSoin, montant) =
+type SoinRecu (numSoin, dateSoin : DateTime, montant) =
     member this.NumSoin = numSoin
     member this.DateSoin = dateSoin
     member this.Montant = montant
@@ -16,13 +17,13 @@ let DateExpr : Regex = new Regex(@"^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[
 let SoinExpr : Regex = new Regex(@"^\d{3}$") 
 let MontExpr : Regex = new Regex(@"^*(\$)$") 
 
-let ValiderSoin(numSoinRecu) : bool = 
+let ValiderSoinRecu(numSoinRecu) : bool = 
     SoinExpr.IsMatch(numSoinRecu)
 
-let ValiderDate(dateSoinRecu) : bool = 
+let ValiderDateRecu(dateSoinRecu) : bool = 
     DateExpr.IsMatch(dateSoinRecu)
 
-let ValiderMontant(montant) : bool = 
+let ValiderMontantRecu(montant) : bool = 
     MontExpr.IsMatch(montant)
 
 
