@@ -54,11 +54,18 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <Compile Include="AssemblyInfo.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Police.fs" />
+    <Compile Include="SoinsAssurer.fs" />
+    <Compile Include="SoinsReclamer.fs" />
+    <Compile Include="Traitement.fs" />
+    <Compile Include="JSONHash.fs" />
     <Compile Include="JsonManager.fs" />
     <Compile Include="Program.fs" />
+    <None Include="ressources\input1.json" />
+    <None Include="ressources\polices.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
