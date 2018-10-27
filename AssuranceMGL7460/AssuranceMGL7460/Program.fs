@@ -24,3 +24,4 @@ let main argv =
 
     lireFichierReclamation(argv.[0].ToString())
     0 // return an integer exit code
+
