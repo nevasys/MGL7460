@@ -67,6 +67,7 @@
     <Compile Include="Program.fs" />
     <None Include="ressources\input1.json" />
     <None Include="ressources\polices.json" />
+    <None Include="ressources\output_reclamation.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">

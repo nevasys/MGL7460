@@ -6,10 +6,11 @@ open Soin
 open Police
 open Remboursement
 open System
-
+open N
 
 type PoliceSoinsAssures = JsonProvider<"./ressources/polices.json">
 type ReclamationSoinsAssures = JsonProvider<"./ressources/input1.json">
+
 
 
 let leTraitement () =
@@ -62,6 +63,13 @@ let leTraitement () =
  
     let listeDesRemboursement  = lesSoinRembourse |> List.toArray
 
+    let mutable total:decimal = 0.0M
+    let calculMontantTotal =
+        for remboursements in listeDesRemboursement do
+            total <- remboursements.Montant + total
+
+
+
 
 
     //****Affichage à la console****
@@ -76,6 +84,7 @@ let leTraitement () =
     for y in listeDesRemboursement do
         printfn "soin: %A" y.NumSoin
         printfn "date: %A" y.DateSoin 
-        printfn "montant %f" y.Montant
+        printfn "montant: %f" y.Montant
         printfn "\n"
     
+    printfn "total: %f" total
