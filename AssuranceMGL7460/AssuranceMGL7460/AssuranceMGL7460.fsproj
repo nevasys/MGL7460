@@ -25,6 +25,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Debug\AssuranceMGL7460.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
+    <StartArguments>input1.json output.json</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -60,6 +61,7 @@
     <Compile Include="Police.fs" />
     <Compile Include="SoinsAssurer.fs" />
     <Compile Include="SoinsReclamer.fs" />
+    <Compile Include="Soin.fs" />
     <Compile Include="Traitement.fs" />
     <Compile Include="JSONHash.fs" />
     <Compile Include="JsonManager.fs" />
