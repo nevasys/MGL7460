@@ -33,7 +33,6 @@ type SoinAssure(numSoin, pourcentage : decimal, limite : decimal, limiteMensuell
     member this.Pourcentage = pourcentage
     member this.Limite = limite
     member this.LimiteMensuelle = limiteMensuelle
-    member this.HasLimiteMensuelle = this.LimiteMensuelle <> Decimal.Parse("0")
 
 let SoinAssureExpr : Regex = new Regex(@"^\d{3}$") 
 let PourAssurecExpr : Regex = new Regex(@"^*(\%)$")
@@ -50,3 +49,6 @@ let ValiderPourcentageAssure(pourcentage) : bool =
 
 let ValiderLimitMensuelleAssure(limiteMensuelle) : bool = 
     MontAssureExpr.IsMatch(limiteMensuelle)
+
+let HasLimiteMensuelle(limiteMensuelle) : bool = 
+    limiteMensuelle <> Decimal.Parse("0")

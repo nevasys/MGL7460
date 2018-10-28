@@ -6,7 +6,7 @@ open Soin
 open Police
 open Remboursement
 open System
-open N
+open System
 
 type PoliceSoinsAssures = JsonProvider<"./ressources/polices.json">
 type ReclamationSoinsAssures = JsonProvider<"./ressources/input1.json">
@@ -33,7 +33,7 @@ let leTraitement () =
     for contract in itemsPolice.Police do
         if(contract.Contrat = PoliceContratRecu.Dossier.ToString().[0].ToString()) then
             for care in contract.Soins do
-                lesSoinAssure <- new SoinAssure(care.Soin, care.Pourcentage, care.Limite, care.LimiteMensuelle) :: lesSoinAssure
+                lesSoinAssure <- new SoinAssure(care.Soin, care.Pourcentage, Decimal.Parse(care.Limite.ToString()), Decimal.Parse(care.LimiteMensuelle.ToString())) :: lesSoinAssure
 
     let listeDesSoinsAssurer  = lesSoinAssure |> List.toArray
 
@@ -55,19 +55,12 @@ let leTraitement () =
             for itemsRecu in listeDesSoinsRecu do
                 if(itemsAssure.Soin = itemsRecu.NumSoin) then 
                     let montantRemboursement : decimal = Decimal.Parse(itemsRecu.Montant.ToString()) * itemsAssure.Pourcentage
-                    
-                    if((itemsAssure.HasLimiteMensuelle=true) And montantRemboursement > Decimal.Parse(itemsAssure.LimiteMensuelle.ToString())) then
-                        let montantRemboursement = Decimal.Parse(itemsAssure.LimiteMensuelle.ToString())
-                          
-
-                    if(montantRemboursement < Decimal.Parse(itemsAssure.Limite.ToString()) && itemsAssure.Limite <> 0) then 
+                    if(montantRemboursement < Decimal.Parse(itemsAssure.Limite.ToString()) && itemsAssure.Limite <> 0.0M) then 
                         lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, montantRemboursement) :: lesSoinRembourse
-                        let itemsAssure.LimiteMensuelle =  itemsAssure.LimiteMensuelle - montantRemboursement
-                        itemsAssure.LimiteMensuelle
+
                     else
                         lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, Decimal.Parse(itemsAssure.Limite.ToString())) :: lesSoinRembourse
-                        let itemsAssure.LimiteMensuelle =  itemsAssure.LimiteMensuelle - Decimal.Parse(itemsAssure.Limite.ToString())
-                        itemsAssure.LimiteMensuelle
+
 
 
     let listeDesRemboursement  = lesSoinRembourse |> List.toArray
