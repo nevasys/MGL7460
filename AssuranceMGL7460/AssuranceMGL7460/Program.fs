@@ -1,11 +1,4 @@
-﻿// Learn more about F# at http://fsharp.org
-// See the 'F# Tutorial' project for more help.
-
-
-// Useful linkf for us Alex:
-// http://fsharp.github.io/FSharp.Data/library/JsonProvider.html
-// https://msdn.microsoft.com/visualfsharpdocs/conceptual/visual-fsharp
-module Program
+﻿module Program
 
 open FSharp.Data;
 open FSharp.Linq;
@@ -22,6 +15,6 @@ let main argv =
 
     let fichiers = new JSONHash.fichierJSON(argv.[0], argv.[1])
 
-    lireFichierReclamation(argv.[0].ToString())
+    lireFichierReclamation(argv.[0].ToString(), argv.[1].ToString())
     0 // return an integer exit code
 

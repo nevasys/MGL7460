@@ -13,7 +13,7 @@ type ReclamationSoinsAssures = JsonProvider<"./ressources/input1.json">
 
 
 
-let leTraitement () =
+let leTraitement (input, output) =
 
     let itemsPolice = PoliceSoinsAssures.Parse(File.ReadAllText("./ressources/polices.json"))
     let itemsReclamation = ReclamationSoinsAssures.Parse(File.ReadAllText("./ressources/input1.json"))
@@ -56,10 +56,10 @@ let leTraitement () =
                 if(itemsAssure.Soin = itemsRecu.NumSoin) then 
                     let montantRemboursement : decimal = Decimal.Parse(itemsRecu.Montant.ToString()) * itemsAssure.Pourcentage
                     if(montantRemboursement < Decimal.Parse(itemsAssure.Limite.ToString()) && itemsAssure.Limite <> 0.0M) then 
-                        lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, montantRemboursement) :: lesSoinRembourse
+                        lesSoinRembourse <- remboursement(itemsRecu.NumSoin.ToString(), itemsRecu.DateSoin, montantRemboursement) :: lesSoinRembourse
 
                     else
-                        lesSoinRembourse <- new Remboursement(itemsRecu.NumSoin, itemsRecu.DateSoin, Decimal.Parse(itemsAssure.Limite.ToString())) :: lesSoinRembourse
+                        lesSoinRembourse <- remboursement(itemsRecu.NumSoin.ToString(), itemsRecu.DateSoin, Decimal.Parse(itemsAssure.Limite.ToString())) :: lesSoinRembourse
 
 
 
@@ -71,19 +71,29 @@ let leTraitement () =
             total <- remboursements.Montant + total
 
 
+
+    //printfn "validation : %A %A" contratValide, soinRecuValide
+    RemboursementToJson (PoliceContratRecu.Dossier.ToString(), PoliceContratRecu.Mois.ToString(), listeDesRemboursement, total.ToString())
+
     //****Affichage à la console****
-    let LettreTypeDeContratTemp = PoliceContratRecu.Dossier.ToString()
-    let LettreTypeDeContrat = LettreTypeDeContratTemp.[0]
+    //let LettreTypeDeContratTemp = PoliceContratRecu.Dossier.ToString()
+    //let LettreTypeDeContrat = LettreTypeDeContratTemp.[0]
 
-    printfn "Dossier : %A" PoliceContratRecu.Dossier
+    //printfn "Dossier : %A" PoliceContratRecu.Dossier
 
-    printfn "Mois : %A"  PoliceContratRecu.Mois
+    //printfn "Mois : %A"  PoliceContratRecu.Mois
 
-    printfn "\n"
-    for y in listeDesRemboursement do
-        printfn "soin: %A" y.NumSoin
-        printfn "date: %A" y.DateSoin 
-        printfn "montant: %f" y.Montant
-        printfn "\n"
+    //printfn "\n"
     
-    printfn "total: %f" total
+    //let json = serializeJson listeDesRemboursement
+    //serializeAndDeserialized(y)
+        //let yClone = deserializeJson<Remboursement> json
+    //for y in listeDesRemboursement do
+        //printfn "soin: %A" y.NumSoin
+        //printfn "date: %A" y.DateSoin 
+        //printfn "montant: %f" y.Montant
+        //printfn "\n"
+    
+    //printfn "total: %f" total
+
+    

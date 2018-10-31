@@ -27,7 +27,6 @@ C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\F
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\FSharp.Core.xml
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\FSharp.Data.pdb
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\FSharp.Data.xml
-C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.fsprojAssemblyReference.cache
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.exe.config
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.fsproj.CopyComplete
 C:\Users\ADB\Source\Repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.exe
@@ -36,3 +35,17 @@ C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\bin
 C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.fsproj.AssuranceMGL7460.exe.config
 C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.exe
 C:\Users\Mard\Source\Repos\nevasys\MGL7460\AssuranceMGL7460\AssuranceMGL7460\obj\Debug\AssuranceMGL7460.pdb
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\cs\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\de\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\en\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\es\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\fr\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\it\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\ja\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\ko\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\pl\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\pt-BR\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\ru\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\tr\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\zh-Hans\FSharp.Core.resources.dll
+C:\Users\ADB\source\repos\MGL74602\AssuranceMGL7460\AssuranceMGL7460\bin\Debug\zh-Hant\FSharp.Core.resources.dll
