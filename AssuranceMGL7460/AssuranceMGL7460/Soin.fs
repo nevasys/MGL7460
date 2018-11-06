@@ -3,7 +3,6 @@
 open FSharp.Data
 open System.Text.RegularExpressions
 open System
-open Xunit
 
 //type SoinRecu(numSoin, dateSoin, montant : string) = class
 type SoinRecu (numSoin, dateSoin : DateTime, montant) =

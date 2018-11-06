@@ -69,7 +69,6 @@
     <Compile Include="SoinTest.fs" />
     <Compile Include="Traitement.fs" />
     <Compile Include="JSONHash.fs" />
-    <Compile Include="JsonManager.fs" />
     <Compile Include="Program.fs" />
     <None Include="ressources\input1.json" />
     <None Include="ressources\polices.json" />

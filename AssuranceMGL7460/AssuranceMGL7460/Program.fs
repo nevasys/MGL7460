@@ -2,7 +2,6 @@
 
 open FSharp.Data;
 open FSharp.Linq;
-open JsonManager;
 open JSONHash
 open Xunit
 
