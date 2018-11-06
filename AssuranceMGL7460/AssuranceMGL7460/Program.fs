@@ -2,9 +2,10 @@
 
 open FSharp.Data;
 open FSharp.Linq;
-
 open JsonManager;
 open JSONHash
+open Xunit
+
 
 //let jsonManager = new JsonManager("../../../Data/Dossier1.json")
 //jsonManager.PrintDoc()
@@ -16,5 +17,7 @@ let main argv =
     let fichiers = new JSONHash.fichierJSON(argv.[0], argv.[1])
 
     lireFichierReclamation(argv.[0].ToString(), argv.[1].ToString())
+    
+
     0 // return an integer exit code
 

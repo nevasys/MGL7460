@@ -3,6 +3,7 @@
 open FSharp.Data
 open System.Text.RegularExpressions
 open System
+open Xunit
 
 //type SoinRecu(numSoin, dateSoin, montant : string) = class
 type SoinRecu (numSoin, dateSoin : DateTime, montant) =
@@ -25,8 +26,6 @@ let ValiderDateRecu(dateSoinRecu) : bool =
 
 let ValiderMontantRecu(montant) : bool = 
     MontExpr.IsMatch(montant)
-
-
 
 type SoinAssure(numSoin, pourcentage : decimal, limite : decimal, limiteMensuelle : decimal) =
     member this.Soin = numSoin

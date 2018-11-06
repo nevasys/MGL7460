@@ -61,8 +61,6 @@ let leTraitement (input, output) =
                     else
                         lesSoinRembourse <- remboursement(itemsRecu.NumSoin.ToString(), itemsRecu.DateSoin, Decimal.Parse(itemsAssure.Limite.ToString())) :: lesSoinRembourse
 
-
-
     let listeDesRemboursement  = lesSoinRembourse |> List.toArray
 
     let mutable total:decimal = 0.0M
@@ -70,30 +68,7 @@ let leTraitement (input, output) =
         for remboursements in listeDesRemboursement do
             total <- remboursements.Montant + total
 
-
-
-    //printfn "validation : %A %A" contratValide, soinRecuValide
     RemboursementToJson (PoliceContratRecu.Dossier.ToString(), PoliceContratRecu.Mois.ToString(), listeDesRemboursement, total.ToString())
 
-    //****Affichage à la console****
-    //let LettreTypeDeContratTemp = PoliceContratRecu.Dossier.ToString()
-    //let LettreTypeDeContrat = LettreTypeDeContratTemp.[0]
-
-    //printfn "Dossier : %A" PoliceContratRecu.Dossier
-
-    //printfn "Mois : %A"  PoliceContratRecu.Mois
-
-    //printfn "\n"
-    
-    //let json = serializeJson listeDesRemboursement
-    //serializeAndDeserialized(y)
-        //let yClone = deserializeJson<Remboursement> json
-    //for y in listeDesRemboursement do
-        //printfn "soin: %A" y.NumSoin
-        //printfn "date: %A" y.DateSoin 
-        //printfn "montant: %f" y.Montant
-        //printfn "\n"
-    
-    //printfn "total: %f" total
 
     
